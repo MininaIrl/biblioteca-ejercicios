@@ -6,6 +6,22 @@
 */
 const publicaciones = [
   {
+    slug: 'guia-calculo-diferencial-integral',
+    titulo: 'Guía de cálculo diferencial e integral: ejercicios resueltos',
+    categoria: 'Cálculo',
+    fecha: '17 de noviembre de 2026',
+    descripcion: 'Una guía de ejercicios de integración, áreas, derivación implícita y aplicaciones de cálculo en economía, con procedimientos desarrollados.',
+    simbolo: '∫', color: 'mint',
+    pdf: 'pdfs/ejercicios-resueltos-calculo.pdf',
+    sections: [
+      { titulo: '¿Qué contiene esta guía?', texto: 'Reuní ejercicios de cálculo diferencial e integral con sus enunciados y procedimientos, para tenerlos ordenados en un solo documento.' },
+      { titulo: 'Integrales y aplicaciones', texto: 'Incluye integración por sustitución y por partes, cálculo de áreas bajo la curva y reconstrucción de funciones a partir de sus derivadas.' },
+      { titulo: 'Aplicaciones en economía', texto: 'También aparecen problemas de costo e ingreso marginal, optimización de utilidad y minimización de costos de producción.' },
+      { titulo: 'Derivación implícita', texto: 'Hay ejercicios sobre rectas tangentes, razones de cambio relacionadas y aproximaciones con más de una variable. Puedes abrir el PDF para revisar el desarrollo completo.' },
+      { titulo: 'Nota', texto: 'Estos son apuntes de estudio: revisa los procedimientos y las condiciones de cada problema antes de reutilizar los resultados.' }
+    ]
+  },
+  {
     slug: 'derivadas-parciales',
     titulo: 'Derivadas parciales: un ejemplo paso a paso',
     categoria: 'Cálculo',
