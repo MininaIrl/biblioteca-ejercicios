@@ -1,24 +1,44 @@
 # La biblioteca de la Kata ♡
 
-Blog estático de ejercicios resueltos, con estilo pastel, gatitos, buscador, filtro por asignatura, páginas individuales y descargas de PDF. No necesita bases de datos, compiladores ni instalación de dependencias.
+> archivos encontrados en una carpeta sospechosa. ejercicios resueltos, apuntes y pdf gratis. gatos incluidos ฅ
 
-## Publicarlo gratis en GitHub Pages
+Una pequeña biblioteca personal donde comparto ejercicios de matemáticas y material que voy encontrando mientras aprendo sobre ciencia de datos. La idea es mostrar el procedimiento, no solamente el resultado, para que otras personas puedan seguir los pasos y descargar los apuntes.
 
-1. Crea un repositorio público llamado `biblioteca-ejercicios` (o el nombre que quieras).
-2. Sube **el contenido de esta carpeta** a la raíz del repositorio: `index.html`, `styles.css`, `script.js`, `assets/` y `pdfs/`. No subas la carpeta contenedora como un nivel extra.
-3. En el repositorio, entra a **Settings → Pages**.
-4. En **Build and deployment**, selecciona **Deploy from a branch**. Elige `main` y `/ (root)` y guarda.
-5. La dirección será `https://TU-USUARIO.github.io/biblioteca-ejercicios/` (ajusta el nombre si tu repositorio es distinto). La primera publicación puede tomar algunos minutos.
+**[✦ Visitar la biblioteca](https://mininairl.github.io/biblioteca-ejercicios/)** · [Ver los ejercicios](https://mininairl.github.io/biblioteca-ejercicios/#archivo)
 
-## Añadir una entrada
+## ¿Qué hay aquí?
 
-1. Guarda el PDF en `pdfs/`, por ejemplo `pdfs/integrales.pdf`.
+- Ejercicios resueltos con explicaciones paso a paso.
+- Publicaciones organizadas por asignatura y un buscador por tema.
+- PDF que se pueden abrir en el navegador o descargar.
+- Enlaces individuales para compartir cada ejercicio.
+- Una web estática, ligera y sin registro de usuarios. Con gatitos, obviamente.
+
+Por ahora hay dos **ejercicios de demostración**: derivadas parciales y regla de la cadena. Los PDF son ejemplos preparados para probar el sitio, no apuntes personales definitivos. Iré reemplazándolos y agregando material.
+
+## Cómo está hecha
+
+La página está desarrollada con **HTML, CSS y JavaScript**, sin frameworks, bases de datos ni proceso de compilación. Se puede publicar gratuitamente con GitHub Pages.
+
+```text
+.
+├── index.html       # estructura y textos de la página
+├── styles.css       # diseño, colores y adaptación a pantallas
+├── script.js        # entradas del blog, filtros y enlaces a PDF
+├── assets/
+│   └── gatito.svg
+└── pdfs/            # documentos descargables
+```
+
+## Añadir un ejercicio
+
+1. Guarda el archivo en `pdfs/`, con un nombre sencillo, por ejemplo `integrales-por-partes.pdf`.
 2. Abre `script.js` y busca `const publicaciones = [`.
-3. Copia uno de los objetos de ejemplo, separado del anterior con una coma, y reemplaza `slug`, `titulo`, `categoria`, `fecha`, `descripcion`, `simbolo`, `color`, `pdf` y `sections`.
-4. Usa un `slug` diferente para cada entrada, por ejemplo `integrales-por-partes`. `color` puede ser `pink`, `lavender`, `mint` o `peach`.
-5. Guarda los cambios y súbelos a GitHub. La nueva entrada aparecerá sola en la biblioteca y tendrá su URL compartible `?post=integrales-por-partes`.
+3. Duplica una entrada existente y cambia los datos del nuevo ejercicio.
+4. Comprueba que el campo `pdf` apunte al archivo correcto y que cada `slug` sea único.
+5. Guarda los cambios, revísalos en el navegador y súbelos a GitHub.
 
-Ejemplo:
+Ejemplo de entrada:
 
 ```js
 {
@@ -26,29 +46,53 @@ Ejemplo:
   titulo: 'Integración por partes',
   categoria: 'Cálculo',
   fecha: '18 de noviembre de 2026',
-  descripcion: 'Un ejercicio explicado desde cero.',
+  descripcion: 'Un ejemplo explicado sin saltarse los pasos.',
   simbolo: '∫',
   color: 'mint',
-  pdf: 'pdfs/integrales.pdf',
+  pdf: 'pdfs/integrales-por-partes.pdf',
   sections: [
-    { titulo: 'Enunciado', texto: 'Resolver la integral de x por e elevado a x.' },
-    { titulo: 'Procedimiento', formula: '∫x eˣ dx = x eˣ − eˣ + C', texto: 'Aplicamos integración por partes.' }
+    {
+      titulo: 'El problema',
+      texto: 'Queremos resolver una integral usando integración por partes.'
+    },
+    {
+      titulo: 'Procedimiento',
+      formula: '∫x eˣ dx = x eˣ − eˣ + C',
+      texto: 'Elegimos u y dv, aplicamos la fórmula y simplificamos.'
+    }
   ]
 }
 ```
 
-## Personalización
+Los colores de tarjeta disponibles en el proyecto son `pink`, `lavender`, `mint` y `peach`. Cada publicación tiene una dirección compartible como `?post=integrales-por-partes`.
 
-- Nombre y texto inicial: `index.html`.
-- Colores, tipografías y aspecto: `styles.css`, sección `:root`.
-- Publicaciones, sus explicaciones, y rutas a PDF: `script.js`.
-- Logo/ícono de gatito: `assets/gatito.svg`.
-- Aviso de contacto: reemplaza el texto del bloque "sobre el blog" por tu correo o enlace, si lo deseas (no se inventó ninguno).
+## Probar la página en tu computador
 
-## Notas
+Desde la carpeta del proyecto:
 
-- Los dos PDF incluidos son **ejemplos originales generados para demostrar la web**, no tus ejercicios personales.
-- Google Fonts necesita conexión; si falla, se emplean fuentes de sistema.
-- Los PDF se alojan en el propio repositorio. GitHub Pages es adecuado para una biblioteca pequeña o mediana; si acumulas muchos PDF pesados, puedes usar almacenamiento externo.
-- Publica solo materiales que hayas creado o que tengas permiso para redistribuir. Revisa los ejercicios antes de presentarlos como propios o definitivos.
-- El blog funciona sin servicios externos y sus enlaces a publicaciones usan `?post=slug`, por lo que GitHub Pages no necesita reglas de redirección.
+```bash
+python -m http.server 8000
+```
+
+Después abre `http://localhost:8000`. No se necesita instalar dependencias.
+
+## Actualizar la página publicada
+
+```bash
+git add .
+git commit -m "docs: agregar nuevos ejercicios"
+git push origin main
+```
+
+En GitHub, la publicación se configura en **Settings → Pages → Deploy from a branch**, seleccionando `main` y `/ (root)`.
+
+## Algunas notas
+
+- Los PDF están alojados dentro del repositorio y son públicos.
+- El sitio utiliza recursos externos para algunas fuentes y animaciones; esos elementos pueden necesitar conexión a Internet.
+- Si encuentras un error en un ejercicio, revisa el procedimiento con cuidado. Estoy aprendiendo y también puedo equivocarme.
+- Publica únicamente material propio o que tengas permiso para compartir.
+
+---
+
+hecho con cariño, café y una cantidad cuestionable de pestañas abiertas ♡
