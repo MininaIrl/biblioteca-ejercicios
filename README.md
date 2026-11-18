@@ -14,7 +14,7 @@ Una pequeña biblioteca personal donde comparto ejercicios de matemáticas y mat
 - Enlaces individuales para compartir cada ejercicio.
 - Una web estática, ligera y sin registro de usuarios. Con gatitos, obviamente.
 
-Por ahora hay dos **ejercicios de demostración**: derivadas parciales y regla de la cadena. Los PDF son ejemplos preparados para probar el sitio, no apuntes personales definitivos. Iré reemplazándolos y agregando material.
+Por ahora está publicada la guía de cálculo diferencial e integral con ejercicios resueltos. Iré agregando más material.
 
 ## Cómo está hecha
 

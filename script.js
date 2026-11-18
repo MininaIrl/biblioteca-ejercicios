@@ -20,36 +20,6 @@ const publicaciones = [
       { titulo: 'Derivación implícita', texto: 'Hay ejercicios sobre rectas tangentes, razones de cambio relacionadas y aproximaciones con más de una variable. Puedes abrir el PDF para revisar el desarrollo completo.' },
       { titulo: 'Nota', texto: 'Estos son apuntes de estudio: revisa los procedimientos y las condiciones de cada problema antes de reutilizar los resultados.' }
     ]
-  },
-  {
-    slug: 'derivadas-parciales',
-    titulo: 'Derivadas parciales: un ejemplo paso a paso',
-    categoria: 'Cálculo',
-    fecha: 'Ejercicio de ejemplo',
-    descripcion: 'Aprende a derivar una función de dos variables manteniendo la otra constante.',
-    simbolo: '∂', color: 'pink',
-    pdf: 'pdfs/derivadas-parciales.pdf',
-    sections: [
-      {titulo: '¿Qué vamos a resolver?', texto: 'Queremos encontrar las derivadas parciales de f(x, y) = x²y + 3xy². Para derivar con respecto a x, tratamos y como una constante; y para derivar con respecto a y, dejamos x fija.'},
-      {titulo: 'Primero: derivamos respecto a x', formula: '∂f/∂x = 2xy + 3y²', texto: 'El término x²y se convierte en 2xy, mientras que 3xy² se convierte en 3y².'},
-      {titulo: 'Después: derivamos respecto a y', formula: '∂f/∂y = x² + 6xy', texto: 'Ahora x es la constante. El primer término da x² y el segundo da 6xy.'},
-      {titulo: 'Para recordar', texto: 'La idea principal es que cada derivada parcial estudia cómo cambia la función al variar solo una de sus variables. En el PDF tienes los pasos ordenados.'}
-    ]
-  },
-  {
-    slug: 'regla-de-la-cadena',
-    titulo: 'Regla de la cadena sin saltarse los pasos',
-    categoria: 'Cálculo',
-    fecha: 'Ejercicio de ejemplo',
-    descripcion: 'Un ejemplo con funciones compuestas y la notación de Leibniz.',
-    simbolo: 'f′', color: 'lavender',
-    pdf: 'pdfs/regla-de-la-cadena.pdf',
-    sections: [
-      {titulo: 'El problema', texto: 'Vamos a derivar y = (3x + 1)⁴. Es una función dentro de otra, así que la regla de la cadena nos ayuda a ordenarla.'},
-      {titulo: 'Separamos las funciones', formula: 'u = 3x + 1    y = u⁴', texto: 'Primero derivamos la función exterior con respecto a u y después la interior con respecto a x.'},
-      {titulo: 'Aplicamos la regla', formula: 'dy/dx = (dy/du)(du/dx)', texto: 'Tenemos dy/du = 4u³ y du/dx = 3. Al multiplicar y reemplazar u, obtenemos dy/dx = 12(3x + 1)³.'},
-      {titulo: 'Para recordar', texto: 'Piensa en este método como derivar desde afuera hacia adentro. En el PDF puedes revisar el procedimiento completo.'}
-    ]
   }
 ];
 
@@ -96,7 +66,7 @@ function renderArticle(post){
     <div class="article-banner" aria-hidden="true">${sanitize(post.simbolo)} ♡</div>
     <div class="article-body">${post.sections.map(s => `
       <section><h2>${sanitize(s.titulo)}</h2>${s.texto ? `<p>${sanitize(s.texto)}</p>` : ''}${s.formula ? `<div class="formula">${sanitize(s.formula)}</div>` : ''}</section>`).join('')}</div>
-    <div class="download-panel"><div><strong>♡ El PDF prohibido</strong><small>Ábrelo o llévatelo antes de que el gato cambie de opinión.</small></div>
+    <div class="download-panel"><div><strong>♡ Un PDF para ti</strong><small>Ábrelo cuando quieras o guárdalo para después. Prometo que no muerde, ¿o sí? ♡</small></div>
     <div class="hero-actions"><a class="button button-secondary" href="${pdf}" target="_blank" rel="noopener">ver PDF ↗</a><a class="button button-primary" href="${pdf}" download>↓ descargar PDF</a></div></div>
     <div class="article-tools"><button type="button" id="share-post">✦ copiar este link sospechoso</button></div>`;
   $('#share-post').addEventListener('click', async event => {

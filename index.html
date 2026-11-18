@@ -1,15 +1,16 @@
-<
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d0712">
   <meta name="description" content="Ejercicios de matematicas, y cosas para aprender ciencias de datos que voy encontrando en el camino.">
-  <meta property="og:title" content="Biblioteca de la kata ♡">
+  <meta property="og:title" content="La biblioteca de la Kata ♡">
   <meta property="og:description" content="Ejercicios resueltos y apuntes en PDF.">
-  <title>Apuntes de Kata ♡ | Ejercicios resueltos</title>
+  <title>La biblioteca de la Kata ♡ | Ejercicios resueltos</title>
   <link rel="icon" href="assets/gatito.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('kata-theme')||'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -20,53 +21,43 @@
   <div class="background-scrim" aria-hidden="true"></div>
   <div class="site-wrap">
     <header class="header container">
-      <a class="brand" href="./" aria-label="Apuntes de Kata, inicio">
-        <img src="assets/gatito.svg" width="45" height="45" alt="" />
-        <span>apuntes de <strong>kata</strong><span class="brand-heart">♡</span></span>
+      <a class="brand" href="./" aria-label="La biblioteca de la Kata, inicio">
+        <span>la biblioteca de la <strong>kata</strong><span class="brand-heart">♡</span></span>
       </a>
       <nav aria-label="Principal" class="nav">
         <a href="./" data-home>inicio</a>
         <a href="#archivo" data-archive>el archivo</a>
         <a href="#sobre-mi" data-about>lore</a>
       </nav>
-      <a class="header-cta" href="#archivo" data-archive>entrar igual <span aria-hidden="true">↗</span></a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" title="Activar modo oscuro"><span aria-hidden="true">◐</span></button>
     </header>
 
     <main id="contenido" class="container" tabindex="-1">
       <div id="home-view">
         <section class="hero" aria-labelledby="hero-title">
           <div class="hero-copy">
-            <span class="eyebrow"><span aria-hidden="true">☾</span> archivos encontrados en una carpeta sospechosa</span>
             <h1 id="hero-title">Aquí hay ejercicios. <em>lol.</em></h1>
             <p>Entra bajo tu propio riesgo académico.</p>
             <div class="hero-actions">
-              <a href="#archivo" class="button button-primary" data-archive>ver el conocimiento prohibido <span aria-hidden="true">↗</span></a>
+              <a href="#archivo" class="button button-primary" data-archive>a ver <span aria-hidden="true">↗</span></a>
               <a href="#sobre-mi" class="button button-secondary" data-about>¿qué es esto?</a>
             </div>
-            <div class="hero-note">☠ cero registros &nbsp;·&nbsp; ☾ PDF gratis &nbsp;·&nbsp; ฅ gatos incluidos</div>
+            <div class="hero-note">miau</div>
           </div>
           <div class="hero-art" aria-hidden="true">
-            <span class="art-star star-one">✧</span><span class="art-star star-two">✦</span><span class="art-star star-three">✳</span>
-            <div class="paper-sheet paper-behind"></div>
-            <div class="paper-sheet paper-front">
-              <div class="paper-top"><span>documento maldito.txt</span><span>☠</span></div>
-              <div class="paper-formula">f(x) = x² + 3x</div>
-              <div class="paper-line"></div><div class="paper-line short"></div>
-              <div class="paper-scribble">f′(x) = 2x + 3 <span>¿?</span></div>
-              <div class="paper-line tiny"></div>
+            <div class="hero-gif">
+              <img src="https://media.tenor.com/yE_NMk3mV4AAAAAM/touhou-math.gif" width="498" height="280" alt="">
             </div>
-            <div class="cat-illustration"><img src="assets/gatito.svg" alt=""></div>
-            <span class="art-heart">♡</span>
           </div>
         </section>
 
         <section class="intro-strip" aria-label="Qué hay aquí">
-          <div><span class="strip-icon">✎</span><span><strong>se entiende, sorprendentemente</strong><small>los pasos están por ahi</small></span></div>
+          <div><span class="strip-icon">✎</span><span><strong>se entiende por algun motivo</strong><small>los pasos están por ahi</small></span></div>
           <div><span class="strip-icon">↓</span><span><strong>PDF 100% real no fake 1 link mega</strong><small>nya</small></span></div>
         </section>
 
         <section id="archivo" class="archive section" aria-labelledby="archive-title">
-          <div class="section-head"><div><span class="section-kicker">☾ el archivo</span><h2 id="archive-title">Cosas re locas <span>†</span></h2><p>Busca un tema, abre el ejercicio y finge demencia.</p></div><span class="flower" aria-hidden="true">☠</span></div>
+          <div class="section-head"><div><span class="section-kicker">✦ el archivo</span><h2 id="archive-title">Cositas re locas <span>♡</span></h2><p>Busca un tema, abre el ejercicio y finge demencia.</p></div><span class="flower" aria-hidden="true">✿</span></div>
           <div class="filters">
             <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar por título o palabra clave</span><input id="search" type="search" placeholder="Buscar un ejercicio o tema..." autocomplete="off"></label>
             <div class="category-filters" id="categories" aria-label="Filtrar por asignatura"></div>
@@ -77,7 +68,9 @@
         </section>
 
         <section class="about section" id="sobre-mi" aria-labelledby="about-title">
-          <div class="about-doodle" aria-hidden="true">☾<span>†</span></div>
+          <div class="about-gif">
+            <img src="https://media.tenor.com/dKrij9kaPHsAAAAM/lucky-star-konata.gif" width="220" height="201" loading="lazy" alt="Konata de Lucky Star hablando sin parar">
+          </div>
           <div><span class="section-kicker">lore innecesario</span><h2 id="about-title">Una biblioteca rara, pero útil.</h2><p>Guardo aquí ejercicios resueltos, explicaciones y PDF porque mi cerebro esta frito de tanto jugar deadlock. Si a ti también te sirven: messi.</p><p class="about-small">Si encuentras un error, probablemente fue porque estoy haciendo experimentos. Igual puedes avisarme cuando agregue un enlace de contacto.</p></div>
         </section>
       </div>
@@ -85,14 +78,14 @@
       <article id="article-view" class="article-view" hidden aria-live="polite"></article>
     </main>
 
-    <footer class="footer container"><div><span>fin del archivo // puedes irte en paz</span><small>© <span id="year"></span> Apuntes de Kata. Contenido original. · <a href="https://tenor.com/view/anime-dancing-konata-lucky-star-gif-17122179656746614618" target="_blank" rel="noopener noreferrer">fondo via Tenor</a></small></div><a href="./" data-home>invocar el inicio ↑</a></footer>
+    <footer class="footer container"><div><span>fin del archivo// andate</span><small>© <span id="year"></span> La biblioteca de la Kata. Contenido original. · <a href="https://tenor.com/view/anime-dancing-konata-lucky-star-gif-17122179656746614618" target="_blank" rel="noopener noreferrer">fondo via Tenor</a></small></div><a href="./" data-home>pa arriba ↑</a></footer>
   </div>
 
   <aside class="tenor-welcome" id="tenor-welcome" aria-label="Bienvenida">
-    <img src="https://tenor.com/bSOUf.gif" alt="GIF animado de bienvenida" width="190" height="190">
+    <img src="https://media.tenor.com/GKHnTrDdWmkAAAAM/luckystar-animegirl.gif" alt="GIF animado de bienvenida" width="190" height="190">
     <p><strong>a</strong><span>no sé qué hago aquí</span></p>
     <button class="welcome-close" id="welcome-close" type="button">ya cállate</button>
-    <a href="https://tenor.com/bSOUf.gif" target="_blank" rel="noopener noreferrer">via Tenor</a>
+    <a href="https://tenor.com/view/luckystar-animegirl-goofy-gif-25419385" target="_blank" rel="noopener noreferrer">via Tenor</a>
   </aside>
 </body>
 </html>
